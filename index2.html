@@ -283,9 +283,10 @@
 /* Dodatkowe style dla małych ekranów */
 @media (max-width: 768px) {
     .ic {
-        width: 20vw; /* Zwiększenie szerokości ikon na mniejszych ekranach */
-        height: 20vw; /* Zwiększenie wysokości ikon */
+        width: 15vw; /* Zwiększenie szerokości ikon na mniejszych ekranach */
+        height: 15vw; /* Zwiększenie wysokości ikon */
         margin: 3vw; /* Zwiększenie marginesu dla lepszego rozstawienia */
+        margin-top: -10px;
     }
 
     .icons-container {
@@ -324,11 +325,20 @@
 
 
             .ic {
-                width: 40px; /* Dodatkowe zmniejszenie szerokości ikon */
-                height: 40px;
+                width: 50px; /* Dodatkowe zmniejszenie szerokości ikon */
+                height: 50px;
+                margin-top: -10px;
+                
             }
         }
- 
+        @media (max-width: 400px) {
+            .ic {
+                width: 30px; /* Dodatkowe zmniejszenie szerokości ikon */
+                height: 30px;
+                margin-top: -10px;
+                
+            }
+        }
     </style>
  
 
