@@ -114,40 +114,90 @@
         }
 
         /* Ikony usługi w dwóch rzędach po 3 */
-        .icons-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center; /* Rozmieszczenie ikon po środku */
-            gap: 20px;
-            margin-top: 20px; /* Dodanie marginesu górnego dla ikon */
-            max-width: 700px; /* Maksymalna szerokość kontenera */
-        }
+        /* Styl obrazów ikon */
+.ic {
+    width: 12vw; /* Szerokość ikon w procentach, dostosowuje się do szerokości ekranu */
+    height: 10vw; /* Wysokość ikon, aby zachować proporcje */
+    margin: 2vw; /* Margines z każdej strony, zależny od szerokości ekranu */
+    border-radius: 15px; /* Zaokrąglone rogi */
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Dodanie efektu transformacji */
+}
 
-        /* Styl dla podpisu pod ikonami */
-        .ic-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Wyśrodkowanie podpisów */
-            text-align: center; /* Wyśrodkowanie podpisu */
-        }
+/* Styl obrazów ikon przy najechaniu */
+.ic:hover {
+    transform: scale(1.1); /* Powiększenie ikony */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Zwiększenie cienia */
+}
 
-        .ic-container p {
-            font-size: 14px;
-            margin-top: 8px;
-            color: #2d2d94;
-            font-weight: bold;
-        }
+/* Ikony wyświetlane w dwóch rzędach po 3 z podpisami */
+.icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Rozmieszczenie ikon po środku */
+    gap: 4vw; /* Odstęp między ikonami zależny od szerokości ekranu */
+    margin-top: 2vw; /* Górny margines zależny od szerokości ekranu */
+    max-width: 90vw; /* Maksymalna szerokość kontenera (90% szerokości ekranu) */
+}
+
+/* Styl dla podpisu pod ikonami */
+.ic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Wyśrodkowanie podpisów */
+    text-align: center; /* Wyśrodkowanie podpisu */
+}
+
+.ic-container p {
+    font-size: 14px;
+    margin-top: 1vw; /* Margines górny zależny od szerokości ekranu */
+    color: #2d2d94;
+    font-weight: bold;
+}
+
+/* Dodatkowe style dla małych ekranów */
+@media (max-width: 768px) {
+    /* Ikony nie zmieniają wielkości, ale dostosowujemy margines */
+    .ic {
+        margin: 3vw; /* Zwiększenie marginesu dla lepszego rozstawienia */
+    }
+
+    .icons-container {
+        gap: 5vw; /* Zwiększenie odstępu między ikonami */
+        max-width: 100vw; /* Maksymalna szerokość kontenera */
+    }
+
+    .ic-container p {
+        font-size: 12px; /* Zmniejszenie rozmiaru tekstu */
+    }
+}
+
+/* Dodatkowe style dla bardzo małych ekranów */
+@media (max-width: 480px) {
+    /* Ikony nie zmieniają wielkości, ale dostosowujemy margines */
+    .ic {
+        margin: 4vw; /* Zwiększenie marginesu */
+    }
+
+    .ic-container p {
+        font-size: 11px; /* Zmniejszenie rozmiaru tekstu */
+    }
+}
 
         /* Dolny pasek nawigacyjny */
         .navbarr {
             width: 100%;
             max-width: 600px;
             display: flex;
-            justify-content: center; /* Wyśrodkowanie */
+            justify-content: space-between; /* Wyśrodkowanie */
             gap: 20px;
             background-color: #f4f5fa;
             text-align: center;
-            padding: 10px 0;
+            padding: 10px 10px;
             position: fixed;
             bottom: 0;
         }
@@ -169,22 +219,82 @@
                 max-width: 35px;
             }
 
-            .icons-container {
-                gap: 15px;
-                max-width: 100%;
-            }
-
-            .ic {
-                width: 60px; /* Zmniejszenie szerokości ikon na mniejszych ekranach */
-                height: 60px;
-                margin: 15px;
-                border:17px solid white;
-            }
-
-            .ic-container p {
-                font-size: 12px;
-            }
+            /* Styl obrazów ikon */
         }
+.ic {
+    width: 12vw; /* Szerokość ikon w procentach, dostosowuje się do szerokości ekranu */
+    height: 12vw; /* Wysokość ikon, aby zachować proporcje */
+    margin: 2vw; /* Margines z każdej strony, zależny od szerokości ekranu */
+    border-radius: 15px; /* Zaokrąglone rogi */
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Dodanie efektu transformacji */
+}
+
+/* Styl obrazów ikon przy najechaniu */
+.ic:hover {
+    transform: scale(1.1); /* Powiększenie ikony */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Zwiększenie cienia */
+}
+
+/* Ikony wyświetlane w dwóch rzędach po 3 z podpisami */
+.icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Rozmieszczenie ikon po środku */
+    gap: 4vw; /* Odstęp między ikonami zależny od szerokości ekranu */
+    margin-top: 2vw; /* Górny margines zależny od szerokości ekranu */
+    max-width: 90vw; /* Maksymalna szerokość kontenera (90% szerokości ekranu) */
+}
+
+/* Styl dla podpisu pod ikonami */
+.ic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Wyśrodkowanie podpisów */
+    text-align: center; /* Wyśrodkowanie podpisu */
+}
+
+.ic-container p {
+    font-size: 14px;
+    margin-top: 1vw; /* Margines górny zależny od szerokości ekranu */
+    color: #2d2d94;
+    font-weight: bold;
+}
+
+/* Dodatkowe style dla małych ekranów */
+@media (max-width: 768px) {
+    .ic {
+        width: 20vw; /* Zwiększenie szerokości ikon na mniejszych ekranach */
+        height: 20vw; /* Zwiększenie wysokości ikon */
+        margin: 3vw; /* Zwiększenie marginesu dla lepszego rozstawienia */
+    }
+
+    .icons-container {
+        gap: 1vw; /* Zwiększenie odstępu między ikonami */
+        max-width: 100vw; /* Maksymalna szerokość kontenera */
+    }
+
+    .ic-container p {
+        font-size: 12px; /* Zmniejszenie rozmiaru tekstu */
+    }
+}
+
+/* Dodatkowe style dla bardzo małych ekranów */
+@media (max-width: 480px) {
+    .ic {
+        width: 25vw; /* Zwiększenie szerokości ikon na bardzo małych ekranach */
+        height: 25vw; /* Zwiększenie wysokości ikon */
+        margin: 4vw; /* Zwiększenie marginesu */
+    }
+
+    .ic-container p {
+        font-size: px; /* Zmniejszenie rozmiaru tekstu */
+    }
+}
 
         /* Dodatkowe style dla bardzo małych ekranów */
         @media (max-width: 480px) {
@@ -202,8 +312,8 @@
             }
 
             .ic {
-                width: 50px; /* Dodatkowe zmniejszenie szerokości ikon */
-                height: 50px;
+                width: 40px; /* Dodatkowe zmniejszenie szerokości ikon */
+                height: 40px;
             }
         }
     </style>
@@ -242,49 +352,52 @@
             <div class="ic">
                 <img src="iconka.png" alt="Ikona" />
             </div>
-            <p>Podpis 1</p>
-        </div>
-
-        <div class="ic-container">
-            <div class="ic">
-                <img src="iconka1.png" alt="Ikona" />
-            </div>
-            <p>Podpis 2</p>
-        </div>
-
-        <div class="ic-container">
-            <div class="ic">
-                <img src="iconka2.png" alt="Ikona" />
-            </div>
-            <p>Podpis 3</p>
-        </div>
-</div>
-<div class="icons-container">
-        <div class="ic-container">
-            <div class="ic">
-                <img src="iconka3.png" alt="Ikona" />
-            </div>
-            <p>Podpis 4</p>
-        </div>
-
-        <div class="ic-container">
-            <div class="ic">
-                <img src="iconka4.png" alt="Ikona" />
-            </div>
-            <p>Podpis 5</p>
+            <p>Bezpieczie <br>
+            w sieci</p>
         </div>
 
         <div class="ic-container">
             <div class="ic">
                 <img src="iconkauwaa.png" alt="Ikona" />
             </div>
-            <p>Podpis 6</p>
+            <p>Alert<br>
+                powodziowy</p>
+        </div>
+
+        <div class="ic-container">
+            <div class="ic">
+                <img src="iconka1.png" alt="Ikona" />
+            </div>
+            <p>Zastrzerz <br>
+                PESEL</p>
+        </div>
+</div>
+<div class="icons-container">
+        <div class="ic-container">
+            <div class="ic">
+                <img src="iconka2.png" alt="Ikona" />
+            </div>
+            <p>Firma</p>
+        </div>
+
+        <div class="ic-container">
+            <div class="ic">
+                <img src="iconka3.png" alt="Ikona" />
+            </div>
+            <p>Punkty karne</p>
+        </div>
+
+        <div class="ic-container">
+            <div class="ic">
+                <img src="iconka4.png" alt="Ikona" />
+            </div>
+            <p>Mandaty</p>
         </div>
     </div>
 
     <!-- Dolny pasek nawigacyjny -->
     <nav class="navbarr">
-        <img class="ba" src="bar.png" alt="Ikona" />
+        <img class="ba" src="bar.png" alt="Ikona" style="width: 40px;"/>
         <img class="ba" src="bar1.png" alt="Ikona" />
         <img class="ba" src="bar2.png" alt="Ikona" />
         <img class="ba" src="bar4.png" alt="Ikona" />
