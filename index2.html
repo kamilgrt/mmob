@@ -115,10 +115,11 @@
 
         /* Ikony usługi w dwóch rzędach po 3 */
         /* Styl obrazów ikon */
+/* Styl obrazów ikon */
 .ic {
-    width: 12vw; /* Szerokość ikon w procentach, dostosowuje się do szerokości ekranu */
-    height: 10vw; /* Wysokość ikon, aby zachować proporcje */
-    margin: 2vw; /* Margines z każdej strony, zależny od szerokości ekranu */
+    width: 80px; /* Szerokość ikon */
+    height: 80px; /* Wysokość ikon */
+    margin: 15px;
     border-radius: 15px; /* Zaokrąglone rogi */
     background-color: #fff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień */
@@ -139,9 +140,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Rozmieszczenie ikon po środku */
-    gap: 4vw; /* Odstęp między ikonami zależny od szerokości ekranu */
-    margin-top: 2vw; /* Górny margines zależny od szerokości ekranu */
-    max-width: 90vw; /* Maksymalna szerokość kontenera (90% szerokości ekranu) */
+    gap: 20px;
+    margin-top: 20px; /* Dodanie marginesu górnego dla ikon */
+    max-width: 700px; /* Maksymalna szerokość kontenera */
 }
 
 /* Styl dla podpisu pod ikonami */
@@ -154,39 +155,62 @@
 
 .ic-container p {
     font-size: 14px;
-    margin-top: 1vw; /* Margines górny zależny od szerokości ekranu */
+    margin-top: 8px;
     color: #2d2d94;
     font-weight: bold;
 }
 
-/* Dodatkowe style dla małych ekranów */
+/* Dodatkowe style dla urządzeń mobilnych */
 @media (max-width: 768px) {
-    /* Ikony nie zmieniają wielkości, ale dostosowujemy margines */
-    .ic {
-        margin: 3vw; /* Zwiększenie marginesu dla lepszego rozstawienia */
+    .usługi {
+        font-size: 18px;
+    }
+
+    /* Ikony górnego paska na mniejszych ekranach */
+    .top-bar img, .navbarr img.ba {
+        width: 8vw;
+        max-width: 35px;
     }
 
     .icons-container {
-        gap: 5vw; /* Zwiększenie odstępu między ikonami */
-        max-width: 100vw; /* Maksymalna szerokość kontenera */
+        gap: 15px;
+        max-width: 100%;
+    }
+
+    .ic {
+        width: 60px; /* Zmniejszenie szerokości ikon na mniejszych ekranach */
+        height: 60px;
+        margin-left: 10px;
+        margin-top: -10px;
+        border:17px solid white;
     }
 
     .ic-container p {
-        font-size: 12px; /* Zmniejszenie rozmiaru tekstu */
+        font-size: 12px;
     }
 }
 
 /* Dodatkowe style dla bardzo małych ekranów */
 @media (max-width: 480px) {
-    /* Ikony nie zmieniają wielkości, ale dostosowujemy margines */
-    .ic {
-        margin: 4vw; /* Zwiększenie marginesu */
+    .usługi {
+        font-size: 16px;
+    }
+    button {
+        font-size: 14px;
+        padding: 4px 8px;
     }
 
-    .ic-container p {
-        font-size: 11px; /* Zmniejszenie rozmiaru tekstu */
+    .top-bar img, .navbarr img.ba {
+        width: 12vw;
+        max-width: 30px;
+    }
+
+    .ic {
+        width: 50px; /* Dodatkowe zmniejszenie szerokości ikon */
+        height: 50px;
     }
 }
+
 
         /* Dolny pasek nawigacyjny */
         .navbarr {
