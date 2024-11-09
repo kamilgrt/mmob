@@ -167,7 +167,7 @@
     }
 
     /* Ikony górnego paska na mniejszych ekranach */
-    .top-bar img, .navbarr img.ba {
+    .top-bar img, {
         width: 8vw;
         max-width: 35px;
     }
@@ -200,50 +200,36 @@
         padding: 4px 8px;
     }
 
-    .top-bar img, .navbarr img.ba {
+    .top-bar img,  {
         width: 12vw;
         max-width: 30px;
     }
 
-    .ic {
+     .ic {
         width: 50px; /* Dodatkowe zmniejszenie szerokości ikon */
-        height: 50px;
+        height: 50px; 
     }
 }
 
 
         /* Dolny pasek nawigacyjny */
-        .navbarr {
+        .navbarr{
             width: 100%;
-            max-width: 600px;
-            display: flex;
-            justify-content: space-between; /* Wyśrodkowanie */
-            gap: 20px;
-            background-color: #f4f5fa;
+        display: flex;
+        justify-content: space-around;
+        background-color: #f4f5fa;
+      
+       text-align: center;
+        position: fixed;
+        bottom: 0;
+        
+        
+        }
+        .navbar{
+            
             text-align: center;
-            padding: 10px 10px;
-            position: fixed;
-            bottom: 0;
-        }
-
-        .navbarr img.ba {
-            width: 10vw;
-            max-width: 40px;
-        }
-
-        /* Media queries dla urządzeń mobilnych */
-        @media (max-width: 768px) {
-            .usługi {
-                font-size: 18px;
-            }
-
-            /* Ikony górnego paska na mniejszych ekranach */
-            .top-bar img, .navbarr img.ba {
-                width: 8vw;
-                max-width: 35px;
-            }
-
-            /* Styl obrazów ikon */
+            
+            
         }
 .ic {
     width: 12vw; /* Szerokość ikon w procentach, dostosowuje się do szerokości ekranu */
@@ -330,7 +316,7 @@
                 padding: 4px 8px;
             }
 
-            .top-bar img, .navbarr img.ba {
+           
                 width: 12vw;
                 max-width: 30px;
             }
@@ -421,11 +407,11 @@
 
     <!-- Dolny pasek nawigacyjny -->
     <nav class="navbarr">
-        <img class="ba" src="bar.png" alt="Ikona" style="width: 40px;"/>
-        <img class="ba" src="bar1.png" alt="Ikona" />
-        <img class="ba" src="bar2.png" alt="Ikona" />
-        <img class="ba" src="bar4.png" alt="Ikona" />
-        <img class="ba" src="bar5.png" alt="Ikona" />
+        <a href="inex3.html"><img class="ba" src="bar.png" alt="sometext" style="width: 40px;" /></a>
+        <img class="ba" src="bar1.png" alt="sometext" style="width: 65px;" />
+        <img class="ba" src="bar2.png" alt="sometext" style="width: 50px;" />
+        <img class="ba" src="bar4.png" alt="sometext" style="width: 50px;" />
+        <img class="ba" src="bar5.png" alt="sometext" style="width: 40px;" />
     </nav>
 
 </body>
