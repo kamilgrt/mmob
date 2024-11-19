@@ -8,11 +8,13 @@
     
 </head>
 <body style="background-color: aliceblue;">
+    
     <nav class="navbar">
         
         <a href="index2.html"><img class="wroc" src="wroc.png" width="70"></a>
         <img class="dow" src="pas2.png" width="90">
         <img class="inf" src="pas3.png" width="30"><br>
+        <div id="czas" class="czas"></div>
         <img class="dowod" src="DOWOD.gif" width="370">
         <img class="dowo" src="guz1.png" width="340">
         <img class="dowo" src="guz2.png" width="340">
@@ -31,7 +33,10 @@
         
     
     <style>
-
+         #czas {
+     font-size: 12px;
+    font-weight: bold;
+    }
         .navbarr{
             width: 100%;
         display: flex;
@@ -76,8 +81,37 @@
             
             
         }
-
+        .czas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+ 
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #555;
+}
       
     </style>
+<script>
+    function aktualizujCzas() {
+  const teraz = new Date();
+  const godzina = teraz.getHours().toString().padStart(2, '0');
+  const minuta = teraz.getMinutes().toString().padStart(2, '0');
+  const sekunda = teraz.getSeconds().toString().padStart(2, '0');
+  const dzien = teraz.getDate().toString().padStart(2, '0');
+  const miesiac = (teraz.getMonth() + 1).toString().padStart(2, '0');
+  const rok = teraz.getFullYear();
+
+  document.getElementById('czas').textContent = `Czas: ${godzina}:${minuta}:${sekunda} ${dzien}.${miesiac}.${rok}`;
+}
+
+// Uruchomienie aktualizacji czasu co sekundę
+setInterval(aktualizujCzas, 1000);
+
+// Wywołanie funkcji od razu po załadowaniu
+aktualizujCzas();
+
+  </script>
 </body>
 </html>
